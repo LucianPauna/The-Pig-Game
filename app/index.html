@@ -7,16 +7,41 @@
     <meta name="author" content="Lucian Pauna" />
     <meta name="description" content="A 2-players dice game that you can play with a friend." />
     <title>The Pig Game</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css" />
+    
+    <link href="/temp/styles/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1>The Pig Game</h1>
+    <h1 class="title">The Pig Game</h1>
     <div class="wrapper clearfix">
-      <div class="player-0-panel active">
-          
+      
+      <div class="player player--0-panel active">
+          <div class="player__name" id="name-0">Player 1</div>
+          <div class="player__score" id="score-0">41</div>
+          <div class="player__current-box">
+            <div class="player__current-label">Current</div>
+            <div class="player__current-score">14</div>
+          </div>
       </div>
-      <div class="player-1-panel">
-          
+      
+      <div class="player player--1-panel">
+        <div class="player__name" id="name-1">Player 2</div>
+        <div class="player__score" id="score-1">79</div>
+        <div class="player__current-box">
+          <div class="player__current-label">Current</div>
+          <div class="player__current-score">3</div>
+        </div>
       </div>
+      
+      <button class="btn btn--new">New Game</button>
+      <button class="btn btn--roll">Roll Dice</button>
+      <button class="btn btn--hold">Hold</button>
+      
+      <input type="text" placeholder="Winning score" class="final-score" />
+      
+      <img src="assets/images/icons/dice-6.png" alt="Dice" class="dice" id="dice-1" />
+      <img src="assets/images/icons/dice-6.png" alt="Dice" class="dice" id="dice-2" />
     </div>
   </body>
 </html>

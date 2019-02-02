@@ -14,13 +14,13 @@ gulp.task('watch', function() {
     browserSync.reload();
   });
 
-  //watch('./app/assets/styles/**/*.css', function() {
-    //gulp.start("cssInject");
-  //});
+  watch('./app/assets/styles/**/*.css', function() {
+    gulp.task('cssInject')();
+  });
   
 });
 
-//gulp.task('cssInject', ['styles'], function() {
-  //return gulp.src('./app/temp/styles/styles.css')
-    //.pipe(browserSync.stream());
-//});
+gulp.task('cssInject', gulp.series('styles', function() {
+  return gulp.src('./app/temp/styles/styles.css')
+    .pipe(browserSync.stream());
+}));
