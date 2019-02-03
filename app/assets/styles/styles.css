@@ -9,3 +9,6 @@
 @import "modules/_btn";
 @import "modules/_final-score";
 @import "modules/_dice";
+@import "modules/_winner";
+@import "modules/_sprite.css";
+@import "modules/_rules.css";

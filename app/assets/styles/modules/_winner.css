@@ -1,0 +1,8 @@
+.winner {
+  background-color: #F7F7F7;
+  
+  & .player__name {
+    font-weight: 300;
+    color: $mainRed;
+  }
+}
