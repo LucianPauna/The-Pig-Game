@@ -3,6 +3,27 @@
   width: 50%;
   height: 600px;
   padding: 100px;
+  
+  @mixin atMedium {
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    margin: 0;
+  }
+  
+  @mixin atSmall {
+    float: none;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+  }
+  
+  &:nth-of-type(2) {
+    @mixin atSmall {
+      position: relative;
+      padding-top: 75px;
+    }
+  }
 }
 
 .player__name {
@@ -15,6 +36,22 @@
   margin-top: 20px;
   margin-bottom: 10px;
   color: #444;
+  
+  @mixin atMedium {
+    max-width: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.7rem;
+    margin-top: 0;
+    padding-top: 5px;
+    margin-bottom: 0;
+  }
+  
+  @mixin atSmall {
+    max-width: 200px;
+    font-size: 1.5rem;
+    padding-top: 10px;
+  }
 }
 
 .player__score {
@@ -23,6 +60,15 @@
   color: $mainRed;
   font-weight: 100;
   margin-bottom: 130px;
+  
+  @mixin atMedium {
+    font-size: 4rem;
+    margin-bottom: 60px;
+  }
+  
+  @mixin atSmall {
+    margin-bottom: 20px;
+  }
 }
 
 .player__current-box {
@@ -32,14 +78,42 @@
   color: #FFF;
   padding: 10px;
   text-align: center;
+  
+  @mixin atMedium {
+    width: 35%;
+    padding: 5px;
+  }
+  
+  @mixin atSmall {
+    width: 25%;
+    padding: 5px;
+  }
 }
 
 .player__current-label {
   text-transform: uppercase;
   font-size: .9rem;
   margin-bottom: 10px;
+  
+  @mixin atMedium {
+    font-size: .8rem;
+    margin-bottom: 4px;
+  }
+  
+  @mixin atSmall {
+    font-size: .7rem;
+    margin-bottom: 2px; 
+  }
 }
 
 .player__current-score {
   font-size: 2.5rem;
+  
+  @mixin atMedium {
+    font-size: 2rem;
+  }
+  
+  @mixin atSmall {
+    font-size: 1.5rem;
+  }
 }

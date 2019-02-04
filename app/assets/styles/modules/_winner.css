@@ -5,4 +5,8 @@
     font-weight: 300;
     color: $mainRed;
   }
+  
+  & .player__name:after {
+    content: " is the WINNER!";
+  }
 }

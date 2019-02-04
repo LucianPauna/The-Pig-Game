@@ -13,16 +13,15 @@
     <link href="/temp/styles/styles.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-    <h1 class="title">The Pig Game</h1>
     <div class="wrapper clearfix">
-      <span class="rules__menu  rules__menu-open" title="Rules">?</span>
+      <span class="rules__menu rules__menu-open" id="open-rules" title="Rules">?</span>
       
       <div class="player player--0-panel active">
           <div class="player__name" id="name-0">Player 1</div>
           <div class="player__score" id="score-0">41</div>
           <div class="player__current-box">
             <div class="player__current-label">Current</div>
-            <div class="player__current-score">14</div>
+            <div class="player__current-score" id="current-0">14</div>
           </div>
       </div>
       
@@ -31,7 +30,7 @@
         <div class="player__score" id="score-1">79</div>
         <div class="player__current-box">
           <div class="player__current-label">Current</div>
-          <div class="player__current-score">3</div>
+          <div class="player__current-score" id="current-1">3</div>
         </div>
       </div>
       
@@ -44,16 +43,16 @@
       <span class="dice icon-dice-6" id="dice-1"></span>
       <span class="dice icon-dice-6" id="dice-2"></span>
       
-      <script src="temp/scripts/App.js"></script>
-      
       <div class="rules" id="rules">
         <h2>Game Rules</h2>
         <p>- The game has 2 players, playing in rounds</p>
-        <p>- In each turn, a player rolls a dice as many times as he wishes. Each result get added to his ROUND score</p>
+        <p>- In each turn, a player rolls the dices as many times as he wishes. Each result get added to his ROUND score</p>
         <p>- BUT, if the player rolls a 1, all his ROUND score gets lost. After that, it's the next player's turn</p>
         <p>- The player can choose to 'Hold', which means that his ROUND score gets added to his GLOBAL score. After that, it's the next player's turn</p>
-        <p>- The first player to reach 100 points on GLOBAL score wins the game</p>
-        <span class="rules__menu  rules__menu-close">X</span>
+        <p>- The first player to reach the WINNING SCORE points on GLOBAL score wins the game. By default the WINNING SCORE is 100</p>
+        <span class="rules__menu  rules__menu-close" id="close-rules">X</span>
+        
+        <script src="temp/scripts/App.js"></script>
       </div>
     </div>
   </body>

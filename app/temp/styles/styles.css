@@ -381,16 +381,18 @@ body {
   overflow: hidden;
 }
 
-.title {
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  text-transform: uppercase;
-  margin-top: 10px;
-  word-spacing: 2px;
-  font-size: 3rem;
+@media (max-width: 900px) {
+
+.wrapper {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transform: none;
+            transform: none;
+    box-shadow: none
 }
+  }
 
 .active {
   background-color: #F7F7F7;
@@ -416,6 +418,34 @@ body {
   padding: 100px;
 }
 
+@media (max-width: 900px) {
+
+.player {
+    width: 50%;
+    height: 100%;
+    padding: 40px;
+    margin: 0
+}
+  }
+
+@media (max-width: 600px) {
+
+.player {
+    float: none;
+    width: 100%;
+    height: 50%;
+    padding: 0
+}
+  }
+
+@media (max-width: 600px) {
+
+.player:nth-of-type(2) {
+      position: relative;
+      padding-top: 75px
+  }
+  }
+
 .player__name {
   font-size: 2.5rem;
   text-align: center;
@@ -428,6 +458,29 @@ body {
   color: #444;
 }
 
+@media (max-width: 900px) {
+
+.player__name {
+    max-width: 250px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 1.7rem;
+    margin-top: 0;
+    padding-top: 5px;
+    margin-bottom: 0
+}
+  }
+
+@media (max-width: 600px) {
+
+.player__name {
+    max-width: 200px;
+    font-size: 1.5rem;
+    padding-top: 10px
+}
+  }
+
 .player__score {
   font-size: 5rem;
   text-align: center;
@@ -435,6 +488,21 @@ body {
   font-weight: 100;
   margin-bottom: 130px;
 }
+
+@media (max-width: 900px) {
+
+.player__score {
+    font-size: 4rem;
+    margin-bottom: 60px
+}
+  }
+
+@media (max-width: 600px) {
+
+.player__score {
+    margin-bottom: 20px
+}
+  }
 
 .player__current-box {
   background-color: #EB4D4D;
@@ -445,15 +513,61 @@ body {
   text-align: center;
 }
 
+@media (max-width: 900px) {
+
+.player__current-box {
+    width: 35%;
+    padding: 5px
+}
+  }
+
+@media (max-width: 600px) {
+
+.player__current-box {
+    width: 25%;
+    padding: 5px
+}
+  }
+
 .player__current-label {
   text-transform: uppercase;
   font-size: .9rem;
   margin-bottom: 10px;
 }
 
+@media (max-width: 900px) {
+
+.player__current-label {
+    font-size: .8rem;
+    margin-bottom: 4px
+}
+  }
+
+@media (max-width: 600px) {
+
+.player__current-label {
+    font-size: .7rem;
+    margin-bottom: 2px
+}
+  }
+
 .player__current-score {
   font-size: 2.5rem;
 }
+
+@media (max-width: 900px) {
+
+.player__current-score {
+    font-size: 2rem
+}
+  }
+
+@media (max-width: 600px) {
+
+.player__current-score {
+    font-size: 1.5rem
+}
+  }
 
 .btn {
   position: absolute;
@@ -468,6 +582,21 @@ body {
   font-weight: 300;
 }
 
+@media (max-width: 900px) {
+
+.btn {
+    width: 15%;
+    font-size: 1rem
+}
+  }
+
+@media (max-width: 600px) {
+
+.btn {
+    font-size: .8rem
+}
+  }
+
 .btn:hover {
     font-weight: 500;
   }
@@ -476,13 +605,62 @@ body {
   top: 45px;
 }
 
+@media (max-width: 600px) {
+
+.btn--new {
+    top: 42%;
+    width: 140px;
+    padding: 4px;
+    font-size: 1rem;
+    border-radius: none
+}
+  }
+
 .btn--roll {
   top: 405px;
 }
 
+@media (max-width: 900px) {
+
+.btn--roll {
+    top: 70%
+}
+  }
+
+@media (max-width: 600px) {
+
+.btn--roll {
+    -webkit-transform: none;
+            transform: none;
+    left: 5%;
+    top: 34%;
+    width: 60px;
+    height: 60px
+}
+  }
+
 .btn--hold {
   top: 465px;
 }
+
+@media (max-width: 900px) {
+
+.btn--hold {
+    top: 80%
+}
+  }
+
+@media (max-width: 600px) {
+
+.btn--hold {
+    -webkit-transform: none;
+            transform: none;
+    left: 5%;
+    top: 56%;
+    width: 60px;
+    height: 60px
+}
+  }
 
 .final-score {
   position: absolute;
@@ -499,6 +677,30 @@ body {
   font-weight: 700;
 }
 
+@media (max-width: 900px) {
+
+.final-score {
+    top: 88%;
+    font-size: 1.1rem;
+    padding: 7px;
+    width: 170px;
+    font-weight: 500
+}
+  }
+
+@media (max-width: 600px) {
+
+.final-score {
+    top: 55%;
+    -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+    font-size: 1rem;
+    padding: 4px;
+    width: 140px;
+    font-weight: 300
+}
+  }
+
 .dice {
   position: absolute;
   display: block;
@@ -509,13 +711,59 @@ body {
   box-shadow: 0px 10px 60px rgba(0, 0, 0, .1);
 }
 
+@media (max-width: 900px) {
+
+.dice {
+    -webkit-transform: scale(.7) translateX(-72%);
+            transform: scale(.7) translateX(-72%)
+}
+  }
+
+@media (max-width: 600px) {
+
+.dice {
+    -webkit-transform: scale(.6) translate(0);
+            transform: scale(.6) translate(0);
+    right: 0%;
+    left: auto
+}
+  }
+
 #dice-1 {
   top: 120px;
 }
 
+@media (max-width: 900px) {
+
+#dice-1 {
+    top: 20%
+}
+  }
+
+@media (max-width: 600px) {
+
+#dice-1 {
+    top: 30%
+}
+  }
+
 #dice-2 {
   top: 250px;
 }
+
+@media (max-width: 900px) {
+
+#dice-2 {
+    top: 40%
+}
+  }
+
+@media (max-width: 600px) {
+
+#dice-2 {
+    top: 51%
+}
+  }
 
 .winner {
   background-color: #F7F7F7;
@@ -524,6 +772,10 @@ body {
 .winner .player__name {
     font-weight: 300;
     color: #EB4D4D;
+  }
+
+.winner .player__name:after {
+    content: " is the WINNER!";
   }
 
 /*
@@ -598,9 +850,32 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   padding: 5%;
   background-color: #EB4D4D;
   color: #FFF;
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
+  transition: all .3s ease-out;
 }
+
+@media (max-width: 900px) {
+
+.rules {
+    width: 80%;
+    height: 80%;
+    padding: 4%
+}
+  }
+
+@media (max-width: 600px) {
+
+.rules {
+    width: 90%;
+    height: 90%
+}
+  }
+
+.rules--not-visible {
+    visibility: hidden;
+    opacity: 0;
+  }
 
 .rules h2 {
     text-align: center;
@@ -608,9 +883,23 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
     margin-bottom: 40px;
   }
 
+@media (max-width: 900px) {
+
+.rules h2 {
+      margin-bottom: 20px
+  }
+  }
+
 .rules p {
     font-size: 1.2rem;
     margin-bottom: 10px;
+  }
+
+@media (max-width: 900px) {
+
+.rules p {
+      font-size: 1.1rem
+  }
   }
 
 .rules__menu {

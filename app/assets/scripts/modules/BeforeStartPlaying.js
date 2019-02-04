@@ -13,4 +13,4 @@ function BeforeStartPlaying() {
   }
 }
 
-module.exports = BeforeStartPlaying; 
+module.exports = BeforeStartPlaying;
