@@ -8,4 +8,4 @@
  <p>This project was build for a coding challenge in the Complete JavScript Course. The task was to write just the JavaScript code behind, but after completing that, I decided to improve the visual appearance and also, make the game fully responsive. I have used this oportunity to practice my web automation skills as well.</p>
  
  <h4>Tools Used</h4>
- JavaScript | HTML | CSS | Gulp | Webpack
+ JavaScript | HTML | CSS | Gulp | NPM
